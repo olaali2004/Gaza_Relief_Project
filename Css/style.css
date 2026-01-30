@@ -1,0 +1,35 @@
+/* التمرير السلس */
+html {
+    scroll-behavior: smooth; /* [cite: 143] */
+}
+
+/* تنسيق القسم الرئيسي */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/hero.jpg'); /* [cite: 145] */
+    background-size: cover;
+    background-position: center;
+}
+
+/* تأثيرات البطاقات */
+.service-card {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* [cite: 152] */
+    border-bottom: 4px solid #198754;
+}
+
+/* تنسيق الجداول */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* النموذج */
+#contact form {
+    background-color: #f9f9f9;
+}

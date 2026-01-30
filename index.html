@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>غزة نبض الحياة - علا</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-success" href="#">غزة نبض الحياة</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#data">بيانات الإغاثة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">الوسائط</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">طلب مساعدة</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section text-center d-flex align-items-center">
+        <div class="container text-white">
+            <h1 class="display-4 fw-bold">نساند غزة بكل حب</h1>
+            <p class="lead">منصة "علا" لتنسيق الجهود الإغاثية ودعم صمود المجتمع.</p>
+            <a href="#contact" class="btn btn-success btn-lg px-5">سجل كمتطوع</a>
+        </div>
+    </section>
+
+    <section id="services" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-5">ماذا نقدم؟</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card p-4 shadow-sm">
+                        <i class="fas fa-truck-medical fa-3x text-success mb-3"></i>
+                        <h4>إغاثة طبية</h4>
+                        <p>توجيه المستفيدين لأقرب نقطة طبية متاحة.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card p-4 shadow-sm">
+                        <i class="fas fa-bread-slice fa-3x text-success mb-3"></i>
+                        <h4>توزيع الغذاء</h4>
+                        <p>تحديثات يومية لمراكز توزيع الطرود الغذائية.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card p-4 shadow-sm">
+                        <i class="fas fa-house-chimney fa-3x text-success mb-3"></i>
+                        <h4>إيواء طارئ</h4>
+                        <p>المساعدة في العثور على مراكز إيواء آمنة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="data" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">قائمة المساعدات المتوفرة</h2>
+            <div class="table-responsive">
+                <table class="table table-hover bg-white shadow-sm">
+                    <thead class="table-success text-white">
+                        <tr>
+                            <th>المنطقة</th>
+                            <th>نوع المساعدة</th>
+                            <th>الحالة</th>
+                        </tr>
+                    </thead>
+                    <tbody id="aidTableBody">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="py-5 text-center bg-dark text-white">
+        <div class="container">
+            <h2 class="mb-4">صوت من الميدان</h2>
+            <video width="80%" controls class="rounded shadow">
+                <source src="assets/video/main-vid.mp4.mp4" type="video/mp4">
+                متصفحك لا يدعم الفيديو.
+            </video>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 border rounded p-4 shadow">
+                    <h2 class="text-center mb-4">طلب مساعدة عاجلة</h2>
+                    <form id="aidForm">
+                        <div class="mb-3">
+                            <label class="form-label">الاسم الكامل</label>
+                            <input type="text" id="fullName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">الرسالة</label>
+                            <textarea class="form-control" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">إرسال الطلب</button>
+                    </form>
+                    <div id="msg" class="alert alert-success mt-3" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>تطوير الطالبة: علا - قسم نظم المعلومات الإدارية [cite: 1]</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
